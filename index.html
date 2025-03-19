@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل الدخول</title>
+    <title>البث المباشر</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var matchStatus = "no"; // هنا تحدد الكلمة سواء "yes" أو "no"
+
+                if (matchStatus.toLowerCase() === "yes") {
+                    if (navigator.onLine) {
+                        window.location.replace("https://linksshortcut.com/vMvnJ"); // التوجيه عند وجود الإنترنت
+                    } else {
+                        document.body.innerHTML = "<h1 style='color:red; text-align:center;'>❌ هناك مشكله في السيرفر </h1>";
+                    }
+                } else if (matchStatus.toLowerCase() === "no") {
+                    document.body.innerHTML = "<h1 style='color:red; text-align:center;'>❌ لا توجد مباراة حالياً </h1>";
+                } else {
+                    alert("القيمة غير صحيحة، الرجاء استخدام 'yes' أو 'no'.");
+                }
+            }, 1000); // الانتظار لمدة ثانية واحدة
+        });
+    </script>
 </head>
 <body>
-    <h2>تسجيل الدخول</h2>
-    <form>
-        <input type="email" placeholder="البريد الإلكتروني">
-        <input type="password" placeholder="كلمة المرور">
-        <button type="submit">دخول</button>
-    </form>
-
-    <h2>إنشاء حساب</h2>
-    <form>
-        <input type="email" placeholder="البريد الإلكتروني">
-        <input type="password" placeholder="كلمة المرور">
-        <button type="submit">تسجيل</button>
-    </form>
+    <h1 style="text-align:center;">يتم تجهيز السيرفر  </h1>
 </body>
 </html>
